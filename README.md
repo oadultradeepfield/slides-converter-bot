@@ -14,8 +14,11 @@ Self-host a Telegram bot that turns slide PDFs into A4 note pages.
 
 ## How it works
 
-```text
-Telegram → Cloudflare Worker → Python container → Telegram
+```mermaid
+flowchart LR
+    telegram[Telegram] --> worker[Cloudflare Worker]
+    worker --> container[Python container]
+    container --> telegram
 ```
 
 The Worker authenticates requests. The container downloads each PDF, places
