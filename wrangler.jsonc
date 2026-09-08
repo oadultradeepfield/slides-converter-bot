@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "slides-converter-bot",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-09-08",
+  "containers": [
+    {
+      "class_name": "SlidesConverter",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
+      "max_instances": 1
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SLIDES_CONVERTER",
+        "class_name": "SlidesConverter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["SlidesConverter"]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
+
