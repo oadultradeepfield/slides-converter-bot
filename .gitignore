@@ -1,0 +1,14 @@
+.coverage
+.dev.vars
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.egg-info/
+*.pdf
+build/
+dist/
+htmlcov/
+node_modules/
+
