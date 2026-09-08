@@ -1,8 +1,6 @@
 <div align="center">
 
-## 📑 ✍️
-
-# Slides Converter Bot
+# 📑 ✍️ Slides Converter Bot
 
 Self-host a Telegram bot that turns slide PDFs into A4 note pages.
 
