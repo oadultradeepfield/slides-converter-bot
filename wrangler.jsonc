@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "slides-converter-bot",
+  "account_id": "b8c62fa1e9e5506c9a181b9d372a9261",
   "main": "worker/index.ts",
   "compatibility_date": "2026-09-08",
   "containers": [

@@ -11,4 +11,7 @@ build/
 dist/
 htmlcov/
 node_modules/
+rust-worker/target/
+rust-worker/build/
+.wrangler/
 

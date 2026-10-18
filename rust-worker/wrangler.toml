@@ -1,0 +1,24 @@
+name = "slides-converter-bot-rust"
+account_id = "b8c62fa1e9e5506c9a181b9d372a9261"
+main = "build/index.js"
+compatibility_date = "2026-10-12"
+workers_dev = true
+preview_urls = false
+
+[build]
+command = "worker-build --release"
+watch_dir = "src"
+
+[limits]
+cpu_ms = 300000
+
+[[durable_objects.bindings]]
+name = "CONVERSION_JOBS"
+class_name = "ConversionJob"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ConversionJob"]
+
+[observability]
+enabled = true

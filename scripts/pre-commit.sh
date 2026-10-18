@@ -21,3 +21,7 @@ if staged_files | grep -q '\.py$'; then
   make -C "$PROJECT_DIR" test
 fi
 
+if staged_files | rg -q '(^rust-worker/|/rust-worker/)'; then
+  make -C "$PROJECT_DIR" rust-check
+fi
+

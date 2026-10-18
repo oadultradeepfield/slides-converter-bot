@@ -1,17 +1,26 @@
 {
   "name": "slides-converter-bot-worker",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "check": "tsc --noEmit",
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "dev": "wrangler dev",
+    "rust:build": "cd rust-worker && worker-build --release",
+    "rust:check": "cargo fmt --manifest-path rust-worker/Cargo.toml -- --check && cargo clippy --manifest-path rust-worker/Cargo.toml --all-targets -- -D warnings && cargo clippy --manifest-path rust-worker/Cargo.toml --target wasm32-unknown-unknown -- -D warnings",
+    "rust:dev": "cd rust-worker && wrangler dev --config wrangler.toml",
+    "rust:deploy": "cd rust-worker && wrangler deploy --config wrangler.toml",
+    "migration:test": "cargo build --manifest-path rust-worker/Cargo.toml --release --example convert && npm run rust:build && uv run pytest migration/test_parity.py && node --test migration/test_worker.mjs"
   },
   "dependencies": {
     "@cloudflare/containers": "0.3.7"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260907.1",
+    "miniflare": "5.20261012.1-beta",
     "typescript": "^5.9.2",
-    "wrangler": "^4.129.1"
+    "wrangler": "4.151.1"
   }
 }

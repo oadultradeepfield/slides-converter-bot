@@ -8,6 +8,10 @@ Self-host a Telegram bot that turns slide PDFs into A4 note pages.
 
 </div>
 
+A Rust/Wasm implementation is available in [`rust-worker/`](rust-worker/README.md).
+It runs PDF conversion directly in Workers and queues jobs in a SQLite Durable
+Object. See the [migration checks and benchmarks](migration/README.md).
+
 > [!NOTE]
 > Bring your own Telegram bot and Cloudflare account. An allowlist controls
 > access.
@@ -31,7 +35,7 @@ three slides beside dotted notes, and replies with
 
 ## Requirements
 
-- Python 3.12+, [uv](https://docs.astral.sh/uv/), and Node.js 20+
+- Python 3.12+, [uv](https://docs.astral.sh/uv/), and Node.js 22+
 - Docker
 - Cloudflare Workers Paid plan with Containers
 - Telegram bot token from [BotFather](https://t.me/BotFather)

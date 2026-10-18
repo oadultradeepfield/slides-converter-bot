@@ -1,0 +1,57 @@
+[
+  {
+    "name": "30-slides",
+    "pages": 30,
+    "input_bytes": 29553,
+    "python_ms": 859.13,
+    "rust_native_ms": 2.74,
+    "python_bytes": 283286,
+    "rust_bytes": 37651,
+    "rust_wasm_pipeline_ms": 7.99,
+    "wasm_speedup": 107.53
+  },
+  {
+    "name": "100-slides",
+    "pages": 100,
+    "input_bytes": 96284,
+    "python_ms": 2942.17,
+    "rust_native_ms": 5.39,
+    "python_bytes": 943425,
+    "rust_bytes": 101525,
+    "rust_wasm_pipeline_ms": 23.27,
+    "wasm_speedup": 126.44
+  },
+  {
+    "name": "300-slides",
+    "pages": 300,
+    "input_bytes": 286955,
+    "python_ms": 9378.11,
+    "rust_native_ms": 13.29,
+    "python_bytes": 2827802,
+    "rust_bytes": 284993,
+    "rust_wasm_pipeline_ms": 39.39,
+    "wasm_speedup": 238.08
+  },
+  {
+    "name": "30-images",
+    "pages": 30,
+    "input_bytes": 2611207,
+    "python_ms": 1090.5,
+    "rust_native_ms": 3.45,
+    "python_bytes": 2864120,
+    "rust_bytes": 2618385,
+    "rust_wasm_pipeline_ms": 31.45,
+    "wasm_speedup": 34.67
+  },
+  {
+    "name": "200-images",
+    "pages": 200,
+    "input_bytes": 17402940,
+    "python_ms": 7782.97,
+    "rust_native_ms": 14.01,
+    "python_bytes": 19091557,
+    "rust_bytes": 17398811,
+    "rust_wasm_pipeline_ms": 99.69,
+    "wasm_speedup": 78.07
+  }
+]
